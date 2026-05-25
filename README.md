@@ -22,8 +22,10 @@
 
 **Live URL:** [https://lordofwar.guruprasaathm.com](https://lordofwar.guruprasaathm.com)
 
-**Repository:** `https://github.com/YOUR_USERNAME/lord-of-war-reservations`
-
+**Repository:** `https://github.com/guruprasaathm/lord-of-war-reservations`
+<p align="center">
+  <img src="https://guruprasaathm.com/fc/sample.jpg" />
+</p>
 ---
 
 ## Overview
@@ -71,7 +73,10 @@ The frontend uses a fictional cinematic procurement-catalog theme inspired by *L
   - `EXPIRED`
 - Idempotency support for reservation and confirmation flows
 - Guest-session based reservation tracking
-- Concurrency stress test script
+- Concurrency stress test script (of 20 concurrent requests, only one gets confirmed)
+<p align="center">
+  <img src="https://guruprasaathm.com/fc/conc.jpg" />
+</p>
 
 ---
 
