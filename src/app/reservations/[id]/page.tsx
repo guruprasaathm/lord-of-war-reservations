@@ -22,7 +22,7 @@ export default function ReservationPage() {
   const router = useRouter();
 
   const [reservation, setReservation] = useState<ReservationDetails | null>(null);
-  const [now, setNow] = useState(Date.now());
+  const [now, setNow] = useState(() => Date.now());
   const [isLoading, setIsLoading] = useState(true);
   const [isActing, setIsActing] = useState(false);
   const [message, setMessage] = useState<string | null>(null);

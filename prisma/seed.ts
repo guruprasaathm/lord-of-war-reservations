@@ -57,6 +57,7 @@ async function main() {
         countryOfOrigin: "United States",
         originFlag: "🇺🇸",
         manufacturedAt: new Date("1992-05-25"),
+        imageUrl: "/products/magnum.jpg",
       },
     }),
     prisma.product.create({
@@ -69,6 +70,7 @@ async function main() {
         countryOfOrigin: "Albania",
         originFlag: "🇦🇱",
         manufacturedAt: new Date("1972-09-23"),
+        imageUrl: "/products/ammo.jpg",
       },
     }),
     prisma.product.create({
@@ -81,6 +83,7 @@ async function main() {
         countryOfOrigin: "Russia",
         originFlag: "🇷🇺",
         manufacturedAt: new Date("1989-05-07"),
+        imageUrl: "/products/aksample.jpg",
       },
     }),
     prisma.product.create({
@@ -93,6 +96,7 @@ async function main() {
         countryOfOrigin: "Soviet Union",
         originFlag: "🇷🇺",
         manufacturedAt: new Date("1983-11-03"),
+        imageUrl: "/products/t72.jpg",
       },
     }),
     prisma.product.create({
@@ -105,6 +109,7 @@ async function main() {
         countryOfOrigin: "Soviet Union",
         originFlag: "🇷🇺",
         manufacturedAt: new Date("1979-09-17"),
+        imageUrl: "/products/mig21.jpg",
       },
     }),
   ]);

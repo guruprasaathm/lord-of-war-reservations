@@ -100,9 +100,11 @@ export function CatalogClient() {
 
         <nav className="relative z-10 flex items-center justify-between px-6 py-5 md:px-10">
           <div className="flex items-center gap-4">
-            <div className="grid h-14 w-14 place-items-center rounded border border-stone-500 bg-black/60 text-xs font-bold tracking-widest text-amber-200">
-              LOW
-            </div>
+            <img
+              src="/logo.png"
+              alt="Lord of War"
+              className="h-14 w-14 rounded border border-stone-500 bg-black/60 object-cover"
+            />
             <div>
               <p className="text-xs uppercase tracking-[0.45em] text-amber-200/80">
                 Global Depot Network
@@ -170,16 +172,26 @@ export function CatalogClient() {
                 key={product.id}
                 className="overflow-hidden rounded-lg border border-stone-800 bg-[#11140f] shadow-2xl shadow-black/30"
               >
-                <div className="flex h-40 items-end bg-[linear-gradient(135deg,_#2b2e22,_#080907)] p-4">
-                  <div>
-                    <p className="mb-2 inline-flex rounded bg-black/40 px-2 py-1 text-xs uppercase tracking-[0.25em] text-amber-200">
-                      {product.category}
-                    </p>
-                    <h4 className="text-2xl font-black uppercase leading-7">
-                      {product.name}
-                    </h4>
-                  </div>
+              <div className="relative flex h-48 items-end overflow-hidden bg-[linear-gradient(135deg,_#2b2e22,_#080907)] p-4">
+                {product.imageUrl && (
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="absolute inset-0 h-full w-full object-cover opacity-70"
+                  />
+                )}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+                <div className="relative z-10">
+                  <p className="mb-2 inline-flex rounded bg-black/60 px-2 py-1 text-xs uppercase tracking-[0.25em] text-amber-200">
+                    {product.category}
+                  </p>
+                  <h4 className="text-2xl font-black uppercase leading-7">
+                    {product.name}
+                  </h4>
                 </div>
+              </div>
 
                 <div className="space-y-4 p-5">
                   <p className="line-clamp-3 text-sm leading-6 text-stone-300">
