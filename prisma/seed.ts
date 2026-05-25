@@ -1,6 +1,14 @@
+import "dotenv/config";
 import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({
+  connectionString: process.env.DIRECT_URL ?? process.env.DATABASE_URL,
+});
+
+const prisma = new PrismaClient({
+  adapter,
+});
 
 async function main() {
   await prisma.reservation.deleteMany();
@@ -42,7 +50,7 @@ async function main() {
     prisma.product.create({
       data: {
         name: ".357 Magnum - A used gun",
-        slug: "ak-pattern-rifle-crate",
+        slug: "baptiste-gun",
         category: "Small Arms",
         description:
           "Used once by charismatic african leader, it will never jam!",
